@@ -1,0 +1,13 @@
+{
+  "name": "fake_backend",
+  "version": "0.1.0",
+  "description": "Fake REST API with json-server",
+  "scripts": {
+    "startDB": "npx json-server --watch db.json"
+  },
+  "author": "Thiago Lima de Sousa",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

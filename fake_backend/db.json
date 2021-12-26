@@ -1,0 +1,348 @@
+{
+  "categories": [
+    {
+      "desc": "Cultura",
+      "isActive": true,
+      "id": "cca9a815"
+    },
+    {
+      "desc": "Ciências",
+      "isActive": true,
+      "id": "6a32a02e"
+    },
+    {
+      "desc": "Esportes",
+      "isActive": true,
+      "id": "a4d63d46"
+    },
+    {
+      "desc": "História",
+      "isActive": true,
+      "id": "fKyZuGt"
+    }
+  ],
+  "questions": [
+    {
+      "answers": [
+        {
+          "desc": "Itália",
+          "isCorrect": true
+        },
+        {
+          "desc": "Alemanha",
+          "isCorrect": false
+        },
+        {
+          "desc": "Brasil",
+          "isCorrect": false
+        },
+        {
+          "desc": "França",
+          "isCorrect": false
+        }
+      ],
+      "id": "bdf2fdc0b73e",
+      "categoryId": "a4d63d46",
+      "categoryDesc": "Esportes",
+      "desc": "Qual seleção foi a campeã mundial de 2006?",
+      "level": 2,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "No século XIV",
+          "isCorrect": true
+        },
+        {
+          "desc": "No século XIII",
+          "isCorrect": false
+        },
+        {
+          "desc": "No século XII",
+          "isCorrect": false
+        },
+        {
+          "desc": "No século XIII",
+          "isCorrect": false
+        }
+      ],
+      "id": "32a6a531e726",
+      "categoryId": "fKyZuGt",
+      "categoryDesc": "História",
+      "desc": "Em que século o continente europeu foi devastado pela peste bubônica?",
+      "level": 3,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Indonésia",
+          "isCorrect": true
+        },
+        {
+          "desc": "Filipinas",
+          "isCorrect": false
+        },
+        {
+          "desc": "Bahamas",
+          "isCorrect": false
+        },
+        {
+          "desc": "Finlândia",
+          "isCorrect": false
+        }
+      ],
+      "id": "8ee1682f5733",
+      "categoryId": "6a32a02e",
+      "categoryDesc": "Ciências",
+      "desc": "Qual é o maior arquipélago da Terra?",
+      "level": 3,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Dióxido de carbono",
+          "isCorrect": true
+        },
+        {
+          "desc": "dióxido de ferro",
+          "isCorrect": false
+        },
+        {
+          "desc": "Nitrogênio",
+          "isCorrect": false
+        },
+        {
+          "desc": "Nitrato de sódio",
+          "isCorrect": false
+        }
+      ],
+      "id": "c310be5b0f48",
+      "categoryId": "6a32a02e",
+      "categoryDesc": "Ciências",
+      "desc": "Que substância é absorvida pelas plantas e expirada por todos os seres vivos?",
+      "level": 2,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Azul, amarelo, preto, verde e vermelho.",
+          "isCorrect": true
+        },
+        {
+          "desc": "Verde, vermelho, laranja e roxo",
+          "isCorrect": false
+        },
+        {
+          "desc": "Roxo, azul, amarelo, laranja e cinza",
+          "isCorrect": false
+        },
+        {
+          "desc": "Roxo, laranja, branco e azul",
+          "isCorrect": false
+        }
+      ],
+      "id": "8a540393a783",
+      "categoryId": "a4d63d46",
+      "categoryDesc": "Esportes",
+      "desc": "Quais são as cores dos anéis olímpicos?",
+      "level": 3,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Terra, Vênus, Saturno, Urano, Júpiter, Marte, Netuno",
+          "isCorrect": true
+        },
+        {
+          "desc": "Júpiter, Marte, Mercúrio, Netuno, Plutão, Saturno, Terra",
+          "isCorrect": false
+        },
+        {
+          "desc": "Vênus, Saturno, Urano, Júpiter, Marte, Netuno, Mercúrio",
+          "isCorrect": false
+        },
+        {
+          "desc": "Terra, Vênus, Saturno, Júpiter, Marte, Netuno, Mercúrio",
+          "isCorrect": false
+        }
+      ],
+      "id": "k_1LSW6",
+      "categoryId": "6a32a02e",
+      "categoryDesc": "Ciências",
+      "desc": "Quais os planetas do sistema solar?",
+      "level": 1,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Em 2016.",
+          "isCorrect": true
+        },
+        {
+          "desc": "Em 2012.",
+          "isCorrect": false
+        },
+        {
+          "desc": "Em 2004.",
+          "isCorrect": false
+        },
+        {
+          "desc": "Em 2002.",
+          "isCorrect": false
+        }
+      ],
+      "id": "kVYd47T",
+      "categoryId": "a4d63d46",
+      "categoryDesc": "Esportes",
+      "desc": "Em que ano o Rio de Janeiro sediou os Jogos Olímpicos?",
+      "level": 1,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Margaret Thatcher",
+          "isCorrect": true
+        },
+        {
+          "desc": "Angela Merkel",
+          "isCorrect": false
+        },
+        {
+          "desc": "Hillary Clinton",
+          "isCorrect": false
+        },
+        {
+          "desc": "Christine Lagarde",
+          "isCorrect": false
+        }
+      ],
+      "id": "0MgYpIv",
+      "categoryId": "fKyZuGt",
+      "categoryDesc": "História",
+      "desc": "Que líder mundial ficou conhecida como “Dama de Ferro”?",
+      "level": 2,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Belchior, Gaspar e Baltazar",
+          "isCorrect": true
+        },
+        {
+          "desc": "Gabriel, Benjamim e Melchior",
+          "isCorrect": false
+        },
+        {
+          "desc": "Melchior, Noé e Galileu",
+          "isCorrect": false
+        },
+        {
+          "desc": "Gaspar, Nicolau e Natanael",
+          "isCorrect": false
+        }
+      ],
+      "id": "fKSA2b2",
+      "categoryId": "cca9a815",
+      "categoryDesc": "Cultura",
+      "desc": "Quais os nomes dos três Reis Magos?",
+      "level": 1,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Muito Barulho por Nada (2012)",
+          "isCorrect": true
+        },
+        {
+          "desc": "Capitães de Areia (2011)",
+          "isCorrect": false
+        },
+        {
+          "desc": "A Dama das Camélias (1936)",
+          "isCorrect": false
+        },
+        {
+          "desc": "A Revolução dos Bichos (1954)",
+          "isCorrect": false
+        }
+      ],
+      "id": "fZRco4P",
+      "categoryId": "cca9a815",
+      "categoryDesc": "Cultura",
+      "desc": "Qual desses filmes foi baseado na obra de Shakespeare?\n",
+      "level": 3,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "The Doors",
+          "isCorrect": true
+        },
+        {
+          "desc": "The Police",
+          "isCorrect": false
+        },
+        {
+          "desc": "Nirvana",
+          "isCorrect": false
+        },
+        {
+          "desc": "AC/DC",
+          "isCorrect": false
+        }
+      ],
+      "id": "BeJ8dSq",
+      "categoryId": "cca9a815",
+      "categoryDesc": "Cultura",
+      "desc": "Jim Morrison era vocalista de que grupo?",
+      "level": 2,
+      "isActive": true
+    },
+    {
+      "answers": [
+        {
+          "desc": "Alemanha",
+          "isCorrect": true
+        },
+        {
+          "desc": "Estados Unidos",
+          "isCorrect": false
+        },
+        {
+          "desc": "China",
+          "isCorrect": false
+        },
+        {
+          "desc": "Coreia do Norte",
+          "isCorrect": false
+        }
+      ],
+      "id": "q3gEM1G",
+      "categoryId": "fKyZuGt",
+      "categoryDesc": "História",
+      "desc": "Em que país foi construído o Muro de Berlim?",
+      "level": 1,
+      "isActive": true
+    }
+  ],
+  "users": [
+    {
+      "id": "2ac348623855b36b4aaeb0b37cbb13c5ae73f570",
+      "name": "SysAdmin",
+      "username": "thiago.lima",
+      "password": "thiago",
+      "levelRole": 0
+    }
+  ],
+  "sessions": []
+}
