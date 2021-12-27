@@ -1,0 +1,86 @@
+<body id="authpg">
+  <section id="auth" class="hero">
+      <div class="hero-body is-fullheight">
+        <div class="columns is-mobile pt-5">
+            <div class="column is-8-mobile is-two-thirds-tablet is-one-third-desktop is-3-widescreen is-1-full mx-auto p-0">
+              <div class="card is-centered">
+                  <div class="card-header">
+                      <div class="card-header-title is-centered has-background-link">
+                          <h5 class="has-text-white mb-0">
+                              Entre para Continuar
+                          </h5>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <div>
+                          <p class="help is-danger has-text-centered has-text-weight-bold	pb-2" *ngIf="hasError">{{msgError}}</p>
+                      </div>
+
+                      <form
+                          [formGroup]="form"
+                          (ngSubmit)="onSubmit()"
+                          novalidate>
+                          <div class="field">
+                              <div class="control has-icons-left">
+                                  <input
+                                      formControlName="username"
+                                      [ngClass]="{
+                                          'is-danger':
+                                              form.get('username')?.errors && (form.get('username')?.touched ||
+                                              form.get('username')?.dirty), 'is-link':form.get('username')?.valid}"
+                                      class="input is-small"
+                                      type="text"
+                                      placeholder="Informe seu usuário"
+                                      maxlength="20"
+                                  >
+                                  <p class="help is-danger"
+                                     *ngIf="form.get('username')?.invalid && form.get('username')?.touched">Usuário inválido!
+                                  </p>
+
+                                  <span class="icon is-small is-left pl-3">
+                                    <i class="material-icons">account_box</i>
+                                  </span>
+                              </div>
+                          </div>
+
+                          <div class="field">
+                              <div class="control has-icons-left">
+                                  <span class="icon is-left pb-2">
+                                      <i class="material-icons">lock</i>
+                                    </span>
+                                  <input
+                                      formControlName="password"
+                                      [ngClass]="{
+                                          'is-danger':
+                                              form.get('password')?.errors && (form.get('password')?.touched ||
+                                              form.get('password')?.dirty), 'is-link':form.get('password')?.valid}"
+                                      class="input is-small"
+                                      type="password"
+                                      placeholder="Informe sua senha"
+                                      maxlength="20"
+                                  >
+                                  <p class="help is-danger"
+                                     *ngIf="form.get('password')?.invalid && form.get('password')?.touched">Senha inválida!
+                                  </p>
+                              </div>
+                          </div>
+
+                          <div class="field">
+                              <button [disabled]="form.invalid" class="button is-link is-fullwidth">Entrar</button>
+                          </div>
+                      </form>
+                  </div>
+
+                  <div class="card-footer">
+                      <div class="card-footer-item has-text-centered has-background-link">
+                          <span class="has-text-white is-size-7">
+                              Copyright © 2021 tglimatech
+                          </span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </section>
+</body>
