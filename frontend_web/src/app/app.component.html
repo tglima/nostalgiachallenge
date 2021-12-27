@@ -1,0 +1,5 @@
+<router-outlet *ngIf="mustLoadBase() else elseblock"></router-outlet>
+
+<ng-template #elseblock>
+    <app-login></app-login>
+</ng-template>
