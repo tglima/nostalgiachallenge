@@ -44,7 +44,7 @@
                               </select>
                           </div>
                       </div>
-                      <div class="column is-3-fullhd is-4-widescreen is-3-desktop is-12-mobile">
+                      <div class="column is-3-fullhd is-3-widescreen is-3-desktop is-12-mobile">
                           <label class="label">Ativar</label>
                           <div class="select is-full-width" [ngClass]="{'is-danger': form.get('isActive')?.errors && (form.get('isActive')?.touched || form.get('isActive')?.dirty), 'is-success':form.get('isActive')?.valid}">
                               <select class="is-full-width" formControlName="isActive">
