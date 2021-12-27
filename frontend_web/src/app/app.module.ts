@@ -11,6 +11,7 @@ import { ListCategoryComponent } from './components/category/list-category/list-
 import { ListQuestionComponent } from './components/question/list-question/list-question.component';
 import { CategoryManagerComponent } from './components/category/category-manager/category-manager.component';
 import { QuestionManagerComponent } from './components/question/question-manager/question-manager.component';
+import { BaseComponent } from './components/template/base/base.component';
 
 @NgModule(
   {
@@ -22,7 +23,8 @@ import { QuestionManagerComponent } from './components/question/question-manager
       CategoryManagerComponent,
       ListCategoryComponent,
       QuestionManagerComponent,
-      ListQuestionComponent
+      ListQuestionComponent,
+      BaseComponent
     ],
     imports:
       [

@@ -1,0 +1,35 @@
+<section class="hero is-fullheight">
+  <div class="hero-head">
+      <nav class="navbar is-inline-flex has-background-link">
+          <div class="navbar-brand">
+              <a class="navbar-item brand-text" [routerLink]="['/']">
+                  <span class="material-icons">apps</span>
+                  PORTAL
+              </a>
+          </div>
+          <div class="navbar-brand has-background-link">
+              <a class="navbar-item" [routerLink]="['/logout']">
+                  <span class="material-icons">logout</span>
+                  Sair
+              </a>
+          </div>
+      </nav>
+  </div>
+
+  <div class="hero-body is-align-items-start">
+      <div class="container">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+
+
+  <div class="hero-foot">
+      <footer class="footer py-2 has-background-link">
+          <div class="content has-text-centered has-text-white">
+              <span>Copyright © 2021 tglimatech</span>
+          </div>
+      </footer>
+  </div>
+
+
+</section>
