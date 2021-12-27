@@ -7,6 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './components/page/login/login.component';
 import { Pg404Component } from './components/page/pg404/pg404.component';
 import { HomeComponent } from './components/home/home.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
+import { CategoryManagerComponent } from './components/category/category-manager/category-manager.component';
 
 @NgModule(
   {
@@ -14,7 +16,9 @@ import { HomeComponent } from './components/home/home.component';
       AppComponent,
       LoginComponent,
       Pg404Component,
-      HomeComponent
+      HomeComponent,
+      CategoryManagerComponent,
+      ListCategoryComponent
     ],
     imports:
       [

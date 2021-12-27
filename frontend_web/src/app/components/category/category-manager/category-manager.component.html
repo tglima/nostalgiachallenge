@@ -1,0 +1,126 @@
+<div class="is-mobile is_centered pt-5rem">
+
+  <div *ngIf="statusForm ===  status.initial" class="column is-3-fullhd is-4-widescreen is-8-desktop is-12-mobile margin-auto">
+          <form
+          [formGroup]="form"
+          (ngSubmit)="onSubmit()"
+          novalidate>
+          <div hidden="true" class="field">
+              <input
+                  readonly="true"
+                  class="input" type="text"
+                  formControlName="id"
+              >
+          </div>
+          <div class="field">
+              <div class="columns">
+                  <div class="column is-8-fullhd is-8-widescreen is-7-desktop is-12-mobile">
+                      <label class="label">Nome</label>
+                      <div class="control has-icons-right">
+                          <input
+                          [ngClass]="{'is-danger': form.get('desc')?.errors && (form.get('desc')?.touched || form.get('desc')?.dirty), 'is-success':form.get('desc')?.valid}"
+                          class="input" type="text"
+                          placeholder="Nome da Categoria"
+                          maxlength="30" formControlName="desc"
+                          (focusout)="formatInput('desc')">
+                          <span class="icon is-right">
+                              <span class="material-icons pr-0 is-danger has-text-danger" *ngIf="form.get('desc')?.invalid && form.get('desc')?.dirty">error</span>
+                              <span class="material-icons pr-0 is-success has-text-success" *ngIf="form.get('desc')?.valid && form.get('desc')?.dirty">done</span>
+                          </span>
+                          <p class="help is-danger" *ngIf="form.get('desc')?.invalid && form.get('desc')?.touched">Texto inválido!</p>
+                      </div>
+                  </div>
+                  <div class="column is-4-fullhd is-4-widescreen is-5-desktop is-12-mobile">
+                      <label class="label">Ativar</label>
+                      <div class="select is-full-width" [ngClass]="{'is-danger': form.get('isActive')?.errors && (form.get('isActive')?.touched || form.get('isActive')?.dirty), 'is-success':form.get('isActive')?.valid}">
+                          <select class="is-full-width" formControlName="isActive">
+                              <option value="">Selecione</option>((
+                              <option [ngValue]="option.key" *ngFor="let option of OptionsYesNo | keyvalue">{{option.value}}</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="field">
+              <div class="buttons is-centered">
+                  <button [disabled]="form.invalid" class="button is-link">Salvar</button>
+                </div>
+          </div>
+      </form>
+  </div>
+
+
+  <div class="column is-12">
+      <div *ngIf="statusForm === status.load">
+          <p class="title has-text-centered">Aguarde</p>
+          <div class="sk-cube-grid mt-0">
+              <div class="sk-cube sk-cube1"></div>
+              <div class="sk-cube sk-cube2"></div>
+              <div class="sk-cube sk-cube3"></div>
+              <div class="sk-cube sk-cube4"></div>
+              <div class="sk-cube sk-cube5"></div>
+              <div class="sk-cube sk-cube6"></div>
+              <div class="sk-cube sk-cube7"></div>
+              <div class="sk-cube sk-cube8"></div>
+              <div class="sk-cube sk-cube9"></div>
+            </div>
+      </div>
+
+      <div *ngIf="statusForm ===status.success">
+          <div class="column is-12 has-text-centered pb-5">
+              <p class="title">Sucesso</p>
+              <p>
+                  <span class="has-text-link-dark is-size-1 material-icons pr-0">done_all</span>
+              </p>
+              <p>
+                  <span>Item salvo com sucesso!</span>
+              </p>
+          </div>
+      </div>
+
+      <div *ngIf="statusForm === status.error">
+          <div class="has-text-centered pb-5">
+              <p class="title">Ocorreu um erro</p>
+              <p>
+                  <span class="has-text-danger-dark is-size-1 material-icons pr-0">error</span>
+              </p>
+              <p>
+                  <span>Por favor, tente novamente mais tarde.</span>
+              </p>
+          </div>
+      </div>
+
+      <div *ngIf="statusForm === status.error || statusForm === status.success">
+          <div class="columns is-centered has-text-centered pt-5">
+              <div class="field has-addons">
+                  <p class="control">
+                      <button class="button is-link is-outlined pr-0" (click)="refreshComponent()">
+                          Novo
+                          <span class="material-icons pl-1">
+                              add_circle
+                          </span>
+                      </button>
+                  </p>
+                  <p class="control">
+                      <a class="button is-link is-outlined pr-0" [routerLink]="['/']">
+                          Portal
+                          <span class="material-icons pl-1">
+                              apps
+                          </span>
+                      </a>
+                  </p>
+                  <p class="control">
+                      <a class="button is-link is-outlined pr-0" [routerLink]="['/category/list']">
+                          Lista
+                          <span class="material-icons pl-1">
+                              view_list
+                          </span>
+                      </a>
+                  </p>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>

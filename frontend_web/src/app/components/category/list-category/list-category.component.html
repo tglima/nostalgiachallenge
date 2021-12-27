@@ -1,0 +1,31 @@
+<div class="columns is-centered is-mobile pt-5rem">
+  <div class="column is-4-fullhd is-9-widescreen is-half-desktop is-12-mobile">
+      <div class="table-container">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                  <tr>
+                      <th><abbr title="Nome">Nome</abbr></th>
+                      <th width="15%" class="has-text-centered"><abbr title="Ativo">Ativo</abbr></th>
+                      <th width="10%" class="has-text-centered"><abbr title="Editar">#</abbr></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let category of categories">
+                      <th>{{ category.desc }}</th>
+                      <td class="has-text-centered">
+                          <span *ngIf="category.isActive  else elseblock">Sim</span>
+                          <ng-template #elseblock>Não</ng-template>
+                      </td>
+                      <td class="has-text-centered">
+                          <a class="is-small" [routerLink]="['/category/edit/' + category.id]">
+                              <span class="material-icons pr-0">
+                                  edit
+                              </span>
+                          </a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

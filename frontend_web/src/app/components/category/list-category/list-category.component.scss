@@ -1,0 +1,13 @@
+@import "../../../../styles.scss";
+
+.table {
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: $blue;
+}
+.table th abbr {
+  color: $white !important;
+  text-decoration: none !important;
+}
