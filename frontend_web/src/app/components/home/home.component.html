@@ -1,0 +1,222 @@
+<div class="columns pt-5rem">
+  <div class="column is-12">
+      <section class="hero is-link welcome is-small">
+          <div class="hero-body">
+              <div class="container">
+                  <h1>VISÃO GERAL</h1>
+              </div>
+          </div>
+      </section>
+      <section class="info-tiles">
+          <div class="tile is-ancestor has-text-centered">
+              <div class="tile is-parent">
+                  <article class="tile is-child box">
+                      <p class="title">Categorias</p>
+                      <p class="subtitle">{{qtCategories}}</p>
+                  </article>
+              </div>
+              <div class="tile is-parent">
+                  <article class="tile is-child box">
+                      <p class="title">Perguntas</p>
+                      <p class="subtitle">{{qtQuestions}}</p>
+                  </article>
+              </div>
+              <div class="tile is-parent">
+                  <article class="tile is-child box">
+                      <p class="title">Níveis</p>
+                      <p class="subtitle">4</p>
+                  </article>
+              </div>
+              <div class="tile is-parent">
+                  <article class="tile is-child box">
+                      <p class="title">Mídias</p>
+                      <p class="subtitle">0</p>
+                  </article>
+              </div>
+          </div>
+      </section>
+  </div>
+</div>
+<div class="columns">
+
+  <div class="column is-3">
+      <div class="card events-card">
+          <header class="card-header has-background-link">
+              <p class="card-header-title has-text-white">
+                  <span class="material-icons">
+                      label
+                  </span>
+                  Categorias
+              </p>
+          </header>
+          <div class="card-table">
+              <div class="content">
+                  <table class="table is-fullwidth is-striped">
+                      <tbody>
+                          <tr>
+                              <td width="95%">
+                                  Adicionar
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['category/add']">
+                                      <span class="material-icons">
+                                          add_circle
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  Listar / Editar
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['category/list']">
+                                      <span class="material-icons">
+                                          edit
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="column is-3">
+      <div class="card events-card">
+          <header class="card-header has-background-link">
+              <p class="card-header-title has-text-white">
+                  <span class="material-icons">
+                      help
+                  </span>
+                  Perguntas
+              </p>
+          </header>
+          <div class="card-table">
+              <div class="content">
+                  <table class="table is-fullwidth is-striped">
+                      <tbody>
+                          <tr>
+                              <td width="95%">
+                                  Adicionar
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['question/add']">
+                                      <span class="material-icons">
+                                          add_circle
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  Listar / Editar
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['question/list']">
+                                      <span class="material-icons">
+                                          edit
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="column is-3">
+      <div class="card events-card">
+          <header class="card-header has-background-link">
+              <p class="card-header-title has-text-white">
+                  <span class="material-icons">
+                      attach_file
+                  </span>
+                  Mídias
+              </p>
+          </header>
+          <div class="card-table">
+              <div class="content">
+                  <table class="table is-fullwidth is-striped">
+                      <tbody>
+                          <tr>
+                              <td width="95%">
+                                  Adicionar
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['media/add']">
+                                      <span class="material-icons">
+                                          add_circle
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  Remover
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['media/list']">
+                                      <span class="material-icons">
+                                          delete
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="column is-3">
+      <div class="card events-card">
+          <header class="card-header has-background-link">
+              <p class="card-header-title has-text-white">
+                  <span class="material-icons">
+                      settings_applications
+                  </span>
+                  Gerenciar
+              </p>
+          </header>
+          <div class="card-table">
+              <div class="content">
+                  <table class="table is-fullwidth is-striped">
+                      <tbody>
+                          <tr>
+                              <td>
+                                  Usuários
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['users/manager']">
+                                      <span class="material-icons">
+                                          people
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td width="95%">
+                                  Senha
+                              </td>
+                              <td class="level-right">
+                                  <a class="button is-small is-link pr-0" [routerLink]="['users/password/change']">
+                                      <span class="material-icons">
+                                          lock
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
