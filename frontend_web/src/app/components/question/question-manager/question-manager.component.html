@@ -1,0 +1,200 @@
+<div class="is-mobile is-centered pt-5rem">
+  <div *ngIf="statusForm ===  status.initial" class="column is-5-fullhd is-half-widescreen is-8-desktop is-12-mobile margin-auto">
+      <div class="is-centered">
+          <form [formGroup]="form"
+          (ngSubmit)="onSubmit()"
+          novalidate>
+              <div hidden="true" class="field">
+                      <input
+                          readonly="true"
+                          class="input" type="text"
+                          formControlName="id"
+                      >
+              </div>
+
+              <div class="field">
+                  <label class="label">Pergunta</label>
+                  <div class="control">
+                      <textarea
+                          class="textarea" type="text" rows="3"
+                          [ngClass]="{'is-danger': form.get('desc')?.errors && (form.get('desc')?.touched || form.get('desc')?.dirty), 'is-success':form.get('desc')?.valid}"
+                          placeholder="Descreva sua pergunta:"
+                          maxlength="120" formControlName="desc"
+                          (focusout)="formatInput('desc')"
+                          ></textarea>
+                  </div>
+              </div>
+              <div class="field">
+                  <div class="columns">
+                      <div class="column is-6-fullhd is-6-widescreen is-6-desktop is-12-mobile">
+                          <label class="label">Categoria</label>
+                          <div class="select is-full-width" [ngClass]="{'is-danger': form.get('category')?.errors && (form.get('category')?.touched || form.get('category')?.dirty), 'is-success':form.get('category')?.valid}">
+                              <select class="is-full-width" formControlName="category">
+                                  <option value="">Selecione</option>
+                                  <option [ngValue]="c.id" *ngFor="let c of categories">{{c.desc}}</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="column is-3-fullhd is-3-widescreen is-3-desktop is-12-mobile">
+                          <label class="label">Nível</label>
+                          <div class="select is-full-width" [ngClass]="{'is-danger': form.get('level')?.errors && (form.get('level')?.touched || form.get('level')?.dirty), 'is-success':form.get('level')?.valid}">
+                              <select class="is-full-width" formControlName="level">
+                                  <option value="">Selecione</option>
+                                  <option [ngValue]="level" *ngFor="let level of levels">{{level}}</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="column is-3-fullhd is-4-widescreen is-3-desktop is-12-mobile">
+                          <label class="label">Ativar</label>
+                          <div class="select is-full-width" [ngClass]="{'is-danger': form.get('isActive')?.errors && (form.get('isActive')?.touched || form.get('isActive')?.dirty), 'is-success':form.get('isActive')?.valid}">
+                              <select class="is-full-width" formControlName="isActive">
+                                  <option value="">Selecione</option>((
+                                  <option [ngValue]="option.key" *ngFor="let option of OptionsYesNo | keyvalue">{{option.value}}</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+
+              <div class="field">
+
+              </div>
+
+              <div class="field">
+                  <label class="label">Resposta Correta</label>
+                  <div class="control has-icons-right">
+                      <input
+                          [ngClass]="{'is-danger': form.get('answer1')?.errors && (form.get('answer1')?.touched || form.get('answer1')?.dirty), 'is-success':form.get('answer1')?.valid}"
+                          class="input" type="text"
+                          placeholder="Informe a resposta correta"
+                          maxlength="60" formControlName="answer1"
+                          (focusout)="formatInput('answer1')"
+                      >
+                  </div>
+              </div>
+
+              <div class="field">
+                  <label class="label">Resposta Errada 1</label>
+                  <div class="control has-icons-right">
+                      <input
+                          [ngClass]="{'is-danger': form.get('answer2')?.errors && (form.get('answer2')?.touched || form.get('answer2')?.dirty), 'is-success':form.get('answer2')?.valid}"
+                          class="input" type="text"
+                          placeholder="Informe uma resposta errada"
+                          maxlength="60" formControlName="answer2"
+                          (focusout)="formatInput('answer2')"
+                      >
+                  </div>
+              </div>
+
+              <div class="field">
+                  <label class="label">Resposta Errada 2</label>
+                  <div class="control has-icons-right">
+                      <input
+                          [ngClass]="{'is-danger': form.get('answer3')?.errors && (form.get('answer3')?.touched || form.get('answer3')?.dirty), 'is-success':form.get('answer3')?.valid}"
+                          class="input" type="text"
+                          placeholder="Informe outra resposta errada"
+                          maxlength="60" formControlName="answer3"
+                          (focusout)="formatInput('answer3')"
+                      >
+                  </div>
+              </div>
+
+              <div class="field">
+                  <label class="label">Resposta Errada 3</label>
+                  <div class="control has-icons-right">
+                      <input
+                          [ngClass]="{'is-danger': form.get('answer4')?.errors && (form.get('answer4')?.touched || form.get('answer4')?.dirty), 'is-success':form.get('answer4')?.valid}"
+                          class="input" type="text"
+                          placeholder="Informe outra resposta errada"
+                          maxlength="60" formControlName="answer4"
+                          (focusout)="formatInput('answer4')"
+                      >
+                  </div>
+              </div>
+
+              <div class="field">
+                  <div class="buttons is-centered">
+                      <button [disabled]="form.invalid" class="button is-link">Salvar</button>
+                    </div>
+              </div>
+
+          </form>
+      </div>
+  </div>
+
+  <div class="column is-12">
+      <div *ngIf="statusForm === status.load">
+          <p class="title has-text-centered">Aguarde</p>
+          <div class="sk-cube-grid mt-0">
+              <div class="sk-cube sk-cube1"></div>
+              <div class="sk-cube sk-cube2"></div>
+              <div class="sk-cube sk-cube3"></div>
+              <div class="sk-cube sk-cube4"></div>
+              <div class="sk-cube sk-cube5"></div>
+              <div class="sk-cube sk-cube6"></div>
+              <div class="sk-cube sk-cube7"></div>
+              <div class="sk-cube sk-cube8"></div>
+              <div class="sk-cube sk-cube9"></div>
+            </div>
+      </div>
+
+      <div *ngIf="statusForm ===status.success">
+          <div class="column is-12 has-text-centered pb-5">
+              <p class="title">Sucesso</p>
+              <p>
+                  <span class="has-text-link-dark is-size-1 material-icons pr-0">done_all</span>
+              </p>
+              <p>
+                  <span>Item salvo com sucesso!</span>
+              </p>
+          </div>
+      </div>
+
+      <div *ngIf="statusForm === status.error">
+          <div class="has-text-centered pb-5">
+              <p class="title">Ocorreu um erro</p>
+              <p>
+                  <span class="has-text-danger-dark is-size-1 material-icons pr-0">error</span>
+              </p>
+              <p>
+                  <span>Por favor, tente novamente mais tarde.</span>
+              </p>
+          </div>
+      </div>
+
+      <div *ngIf="statusForm === status.error || statusForm === status.success">
+          <div class="columns is-centered has-text-centered pt-5">
+              <div class="field has-addons">
+                  <p class="control">
+                      <button class="button is-link is-outlined pr-0" (click)="refreshComponent()">
+                          Novo
+                          <span class="material-icons pl-1">
+                              add_circle
+                          </span>
+                      </button>
+                  </p>
+                  <p class="control">
+                      <a class="button is-link is-outlined pr-0" [routerLink]="['/']">
+                          Portal
+                          <span class="material-icons pl-1">
+                              apps
+                          </span>
+                      </a>
+                  </p>
+                  <p class="control">
+                      <a class="button is-link is-outlined pr-0" [routerLink]="['/question/list']">
+                          Lista
+                          <span class="material-icons pl-1">
+                              view_list
+                          </span>
+                      </a>
+                  </p>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="columns is-centered is-mobile pt-5rem">
+  <div class="column is-8-fullhd is-10-widescreen is-12-desktop is-12-mobile">
+      <div class="table-container">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                  <tr>
+                      <th><abbr title="Pergunta">Pergunta</abbr></th>
+                      <th width="15%" class="has-text-centered"><abbr title="Categoria">Categoria</abbr></th>
+                      <th width="10%" class="has-text-centered"><abbr title="Nível">Nível</abbr></th>
+                      <th width="15%" class="has-text-centered"><abbr title="Ativo">Ativo</abbr></th>
+                      <th width="10%" class="has-text-centered"><abbr title="Editar">#</abbr></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let qn of questions">
+                      <th>{{ qn.desc }}</th>
+                      <td class="has-text-centered">
+                          <span>{{qn.categoryDesc}}</span>
+                      </td>
+                      <td class="has-text-centered">
+                          <span>{{qn.level}}</span>
+                      </td>
+                      <td class="has-text-centered">
+                          <span *ngIf="qn.isActive  else elseblock">Sim</span>
+                          <ng-template #elseblock>Não</ng-template>
+                      </td>
+                      <td class="has-text-centered">
+                          <a class="is-small" [routerLink]="['/question/edit/' + qn.id]">
+                              <span class="material-icons pr-0">
+                                  edit
+                              </span>
+                          </a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
