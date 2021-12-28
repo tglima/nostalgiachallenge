@@ -1,5 +1,5 @@
 {
-  "name": "fake_backend",
+  "name": "backend_fake",
   "version": "0.1.0",
   "description": "Fake REST API with json-server",
   "scripts": {
