@@ -80,7 +80,18 @@ export class AuthService
 
   private async _checkIsValidSessionUser(idUser: string, idSession: string): Promise<boolean>
   {
-    let resultGetSessions = await this.apiService.getSessionsUser(idUser);
+    let resultGetSessions: ResultDTO = new ResultDTO();
+
+    try
+    {
+      resultGetSessions = await this.apiService.getSessionsUser(idUser);
+    } catch (error)
+    {
+      localStorage.clear();
+      resultGetSessions.object = undefined;
+      console.clear();
+    }
+
     let resultDTO: ResultDTO = new ResultDTO();
 
     if (resultGetSessions.object !== undefined && resultGetSessions.object.length > 0)
